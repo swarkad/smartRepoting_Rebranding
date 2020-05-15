@@ -1,0 +1,46 @@
+video Link :
+https://bmctube.bmc.com/watch/4490/yellofin-android-app-rebranding/
+
+youtube link :
+https://www.youtube.com/watch?v=LjV9_9TOxss
+
+https://www.youtube.com/watch?v=2ztTY1QCqzM
+
+https://www.youtube.com/watch?v=B93Ke-xTdo0
+
+apk signing process :
+https://stackoverflow.com/questions/10930331/how-to-sign-an-already-compiled-apk
+
+or : https://dzone.com/articles/keytool-commandutility-to-generate-a-keystorecerti
+apk signer using jarsinger :-
+1. c:> keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+2. c:> jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore base.apk alias_name
+
+or
+
+1. c:> keytool -genkey -keystore keystore.jks -alias alias_name -keyalg RSA -sigalg SHA256withRSA -validity 1000 -keysize 2048
+2. c:> jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA1 -keystore keystore.jks base.apk alias_name
+
+
+
+Decompile command to get xml file:
+apktool d SmartReporting.apk
+
+recopile apk file command :
+apktool b SmartReporting
+
+
+need perforce(p4v) access and directry :
+﻿//bsmapps/dev/future/client/applications/SmartReportingMobile/ 
+
+https://jira.bmc.com/browse/DRSMX-23387
+
+https://play.google.com/store/apps/details?id=com.hof.yellowfin.bi.ui
+
+smartReporting app installer link :
+https://github.bmc.com/SmartIT/installer/tree/develop-smartit/client_resources/SmartReportingMobile/android
+
+
+
+sonarqube build is failing :
+http://riebctrl03.bmc.com:8090/view/SmartIT/job/NB-SMARTIT-Android-develop-smartIT-GITHUB-SONAR-BUILD/869/console
